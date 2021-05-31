@@ -1,0 +1,26 @@
+{
+  "name": "c1b3rwall-2021",
+  "version": "1.0.0",
+  "description": "Charla C1b3rwall 2021",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "truffle": "^5.3.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VictorNS69/c1b3rwall-2021.git"
+  },
+  "author": "Víctor Nieves Sánchez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VictorNS69/c1b3rwall-2021/issues"
+  },
+  "homepage": "https://github.com/VictorNS69/c1b3rwall-2021#readme"
+}
