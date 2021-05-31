@@ -6,8 +6,9 @@ pragma solidity 0.8.4;
     Players can deposit only 1 Ether at a time.
     Winner will be able to withdraw all Ether.
 */
-contract EtherGame {
+contract EtherGameFixed {
     uint public targetAmount = 3 ether;
+    uint public balance;
     address public winner;
 
     /** Adds an ETH to the balance of the contract
@@ -15,27 +16,29 @@ contract EtherGame {
     function deposit() public payable {
         require(msg.value == 1 ether, "You can only send 1 Ether");
 
-        uint balance = address(this).balance;
+        balance += msg.value;
         require(balance <= targetAmount, "Game is over!");
 
         if (balance == targetAmount) {
             winner = msg.sender;
         }
     }
-    
+
     /** Claims the reward and withdraw all the balance
      */
     function claimReward() public {
         require(msg.sender == winner, "You are not the winner");
 
-        (bool sent, ) = msg.sender.call{value: address(this).balance}("");
+        (bool sent, ) = msg.sender.call{value: balance}("");
         require(sent, "Failed to send Ether");
+        balance = 0;
         winner = address(0);
     }
     
-    /** Checks the contract balance
+     /** Checks the contract balance
      */
     function getContractBalance() public view returns (uint){
         return address(this).balance;
     }
+    
 }
