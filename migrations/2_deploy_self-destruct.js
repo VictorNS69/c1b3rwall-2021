@@ -7,7 +7,7 @@ const EtherGameFixed = artifacts.require('contracts/self-destruct/EtherGameFixed
 
 
 let addresses = {};
-const addressesPath = './addresses.json';
+const addressesPath = './addresses_self-destruct.json';
 
 async function saveAddresesInfo(address, contractName) {
     addresses[contractName] = address;
@@ -43,7 +43,7 @@ module.exports = async function (deployer) {
             etherGameFixed.address,
             "etherGameFixed"
         );
-        
+
         const attack2 = await deployer.deploy(Attack, etherGameFixed.address);
 
         console.log('attack2 deployed: ', attack2.address);
@@ -52,7 +52,7 @@ module.exports = async function (deployer) {
             "attack2"
         );
 
-        await fs.writeFileSync(addressesPath, JSON.stringify(addresses));
+        await fs.writeFileSync(addressesPath, JSON.stringify(addresses), {flag: 'wx'});
     }
     catch (err) {
         console.log("ERROR:", err);
