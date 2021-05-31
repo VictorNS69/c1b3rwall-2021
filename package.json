@@ -7,11 +7,14 @@
     "test": "test"
   },
   "dependencies": {
+    "@remix-project/remixd": "^0.3.5",
     "truffle": "^5.3.8"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "mocha"
+    "remix-ide": "docker run --name remix-ide -d -p 8080:80 remixproject/remix-ide:latest",
+    "remixd": "./node_modules/.bin/remixd -s $(pwd) --remix-ide http://localhost:8080 &",
+    "ganache": "docker run --name ganache-cli -d -p 8545:8545 trufflesuite/ganache-cli:latest"
   },
   "repository": {
     "type": "git",
