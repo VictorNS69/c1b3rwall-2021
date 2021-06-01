@@ -16,7 +16,7 @@
     "remixd": "./node_modules/.bin/remixd -s $(pwd)/contracts --remix-ide http://localhost:8080",
     "start_ganache": "docker run --name ganache-cli -d -p 8545:8545 trufflesuite/ganache-cli:latest",
     "stop_ganache": "docker stop ganache-cli && docker rm ganache-cli",
-    "deploy": "rm -f addresses* && ./node_modules/.bin/truffle migrate --network=development"
+    "deploy": "rm -f addresses* && ./node_modules/.bin/truffle migrate --network=development --reset"
   },
   "repository": {
     "type": "git",
