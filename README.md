@@ -38,5 +38,5 @@ In order to test these vulnerabilities, perform the following steps.
 3. Start your local Remix IDE with `npm run-script remix-ide`.
 4. Link your localhost with Remix IDE with `npm run-script remixd-local`.
 5. Deploy the Smart Contracts with `npm run-script deploy`. This will generate several `json` files (`addresses_<vulnerability>`) with the addresses of the different contracts.
-6. In Remix, connect to your local blockchain and instantiate the Contracts at the addresses mentioned above. For more information about Remix IDE, please check this [link](https://remix-ide.readthedocs.io/en/latest/layout.html).
+6. Go to http://localhost:8080/, connect to your localhost and ganache, and then instantiate the Contracts at the addresses mentioned above. For more information about Remix IDE, please check this [link](https://remix-ide.readthedocs.io/en/latest/layout.html).
 7. Play with this vulnerabilities and learn 😃.
