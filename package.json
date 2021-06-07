@@ -1,14 +1,14 @@
 {
   "name": "c1b3rwall-2021",
   "version": "1.0.0",
-  "description": "Charla C1b3rwall 2021",
+  "description": "Talk C1b3rwall 2021. 'Cryptocurrencies and Smart Contracts: 100% secure?'",
   "main": "truffle-config.js",
   "directories": {
     "test": "test"
   },
   "dependencies": {
-    "@remix-project/remixd": "^0.3.5",
-    "truffle": "^5.3.8"
+    "@remix-project/remixd": "0.3.5",
+    "truffle": "5.3.8"
   },
   "devDependencies": {},
   "scripts": {
