@@ -2,7 +2,7 @@
 pragma solidity 0.7.6;
 
 /** Fixed in 0.8.0+ ?
- *  Recomended fix: Uses auxiliar libraries as SafeMath.sol from Openeppelin
+ *  Recomended fix: Use auxiliar libraries such as SafeMath.sol from Openeppelin
  * https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol
  */
 contract OverflowFixed {
